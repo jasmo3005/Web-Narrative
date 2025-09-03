@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>p5.js & Assets Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- p5.js core + p5.sound for audio -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+
+    <script src="sketch.js" defer></script>
+  </head>
+
+  <body>
+    <h1>ANCIENT FOREST</h1>
+
+    <div id="canvas-centerer" style="position: relative;">
+      <div id="sketch"></div>
+      <div id="sidebar">
+        <button id="pickup-orb">Pick Up Orb</button>
+        <button id="talk-orb">Talk to Orb</button>
+        <button id="let-orb-idle">Let Orb Idle</button>
+        <button id="next-scene">Go Forward</button>
+        <button id="prev-scene">Go Backward</button>
+      </div>
+    </div>
+
+    <div id="leftbar">
+      <button id="rain-master" style="display:none;">Rain Master</button>
+    </div>
+
+    <div id="bottom-controls">
+      <button id="reset-game">Power / Reset</button>
+      <button id="toggle-sound">Play / Stop Music</button>
+      <label>Volume:
+        <input id="vol" type="range" min="0" max="1" step="0.01" value="0.5" />
+        <span id="volVal">0.50</span>
+      </label>
+      <button id="toggle-achievements">Achievements</button>
+    </div>
+  </body>
+</html>

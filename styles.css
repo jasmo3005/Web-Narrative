@@ -1,0 +1,129 @@
+html, body { margin: 0; }
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff; /* Make default text white */
+  text-align: center;
+  background: #000; /* Black background */
+  background-image: none; /* Remove image if you want pure black */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+  display: flex;
+  justify-content: center;      /* Center the whole group horizontally */
+  align-items: flex-start;
+  width: 100vw;                 /* Take full viewport width */
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+#canvas-centerer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: fit-content;      /* <-- This is the key change */
+  margin: 0 auto;
+}
+
+#sketch {
+  margin: 20px 0;               /* Remove left/right margin */
+  border: 2px solid #ccc;
+  padding: 10px;
+  width: fit-content;
+  background: #fff;
+  z-index: 1;
+}
+
+.controls {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  background: rgba(255,255,255,0.75);
+  padding: 8px 12px;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  margin: 8px auto 20px; 
+  width: fit-content; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+button {
+  color: #fff;
+  background: #222; /* Optional: dark button background */
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #444;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 32px;
+  background: rgba(34,34,34,0.95);
+  padding: 20px 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 2;
+  height: fit-content;
+  align-self: flex-start;
+}
+
+#bottom-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background: rgba(34,34,34,0.95);
+  padding: 18px 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  margin: 32px auto 24px;
+  width: fit-content;
+}
+
+#leftbar {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 10;
+}
+
+#rain-master {
+  background: #222;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  #sidebar {
+    position: static;
+    transform: none;
+    margin: 0 auto 24px auto;
+  }
+  #sidebar > * {
+    margin: 8px 0;
+    max-width: 80px;
+  }
+}
+
